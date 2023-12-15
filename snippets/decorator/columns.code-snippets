@@ -1,0 +1,52 @@
+{
+  "Column": {
+    "prefix": ["ns_typeorm_deco_column", "@Column", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@Column({", "  name: '${1:name}',", "  type: '${2:type}',", "  length: ${3:length},", "  nullable: true,", "  default: null,", "})", ""]
+  },
+  "CreateDateColumn": {
+    "prefix": ["ns_typeorm_deco_create_date_column", "@CreateDateColumn", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@CreateDateColumn({", "  name: '${1:name}',", "  type: 'timestamp',", "  default: () => 'CURRENT_TIMESTAMP',", "})", ""]
+  },
+  "UpdateDateColumn": {
+    "prefix": ["ns_typeorm_deco_update_date_column", "@UpdateDateColumn", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@UpdateDateColumn({", "  name: '${1:name}',", "  type: 'timestamp',", "  default: () => 'CURRENT_TIMESTAMP',", "})", ""]
+  },
+  "DeleteDateColumn": {
+    "prefix": ["ns_typeorm_deco_delete_date_column", "@DeleteDateColumn", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@DeleteDateColumn({", "  name: '${1:name}',", "  type: 'timestamp',", "  nullable: true,", "  default: null,", "})", ""]
+  },
+  "ObjectIdColumn": {
+    "prefix": ["ns_typeorm_deco_object_id_column", "@ObjectIdColumn", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@ObjectIdColumn({", "  name: '${1:name}',", "  nullable: true,", "  default: null,", "})", ""]
+  },
+  "PrimaryColumn": {
+    "prefix": ["ns_typeorm_deco_primary_column", "@PrimaryColumn", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@PrimaryColumn({", "  name: '${1:name}',", "  type: '${2:type}',", "  length: ${3:length},", "  nullable: true,", "  default: null,", "})", ""]
+  },
+  "PrimaryGeneratedColumn": {
+    "prefix": ["ns_typeorm_deco_primary_generated_column", "@PrimaryGeneratedColumn", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": "@PrimaryGeneratedColumn($0)"
+  },
+  "VersionColumn": {
+    "prefix": ["ns_typeorm_deco_version_column", "@VersionColumn", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@VersionColumn({", "  name: '${1:name}',", "  type: 'int',", "  default: 1,", "})", ""]
+  },
+  "ViewColumn": {
+    "prefix": ["ns_typeorm_deco_view_column", "@ViewColumn", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@ViewColumn({", "  name: '${1:name}',", "  type: '${2:type}',", "  length: ${3:length},", "  nullable: true,", "  default: null,", "})", ""]
+  },
+  "VirtualColumn": {
+    "prefix": ["ns_typeorm_deco_virtual_column", "@VirtualColumn", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@VirtualColumn({", "  name: '${1:name}',", "  type: '${2:type}',", "  length: ${3:length},", "  nullable: true,", "  default: null,", "})", ""]
+  }
+}

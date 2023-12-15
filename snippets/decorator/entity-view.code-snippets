@@ -1,0 +1,7 @@
+{
+  "ViewEntity": {
+    "prefix": ["ns_typeorm_deco_view_entity", "@ViewEntity", ""],
+    "scope": "plaintext,typescript,typescriptreact",
+    "body": ["@ViewEntity()", "export class ${1:EntityName} {", "  @ViewColumn()", "  ${2:column_name}: ${3:column_type};", "}", ""]
+  }
+}
