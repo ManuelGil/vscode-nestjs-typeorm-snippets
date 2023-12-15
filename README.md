@@ -1,8 +1,6 @@
-![icon](https://raw.githubusercontent.com/ManuelGil/vscode-nestjs-typeorm-snippets/main/icon.png)
-
 # NestJS TypeORM Snippets for VSCode Editor
 
-[![Latest Release](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-nestjs-typeorm-snippets-extension?style=flat&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets-extension)
+[![Latest Release](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-nestjs-typeorm-snippets?style=flat&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-nestjs-typeorm-snippets)]()
 
 Snippets for TypeORM and NestJS for faster development. This extension for Visual Studio Code adds snippets for TypeORM for NestJS development.
@@ -15,11 +13,9 @@ Snippets for TypeORM and NestJS for faster development. This extension for Visua
 
 ### Snippets
 
-![snippets](https://raw.githubusercontent.com/ManuelGil/vscode-nestjs-typeorm-snippets/main/docs/images/snippets.gif)
+![demo](https://raw.githubusercontent.com/ManuelGil/vscode-nestjs-typeorm-snippets/main/docs/images/demo.gif)
 
 Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is a list of the most important shortcuts.
-
-#### $CFG Snippets
 
 | Snippet | Purpose |
 | --- | --- |
