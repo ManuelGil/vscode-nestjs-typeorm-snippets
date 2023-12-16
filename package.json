@@ -2,7 +2,7 @@
   "name": "vscode-nestjs-typeorm-snippets",
   "displayName": "NestJS TypeORM Snippets for VSCode Editor",
   "description": "Snippets for TypeORM and NestJS for faster development. This extension for Visual Studio Code adds snippets for TypeORM for NestJS development.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "icon": "icon.png",
   "license": "MIT",
   "publisher": "imgildev",
@@ -86,6 +86,9 @@
       },
       {
         "path": "./snippets/decorator/tree.code-snippets"
+      },
+      {
+        "path": "./snippets/custom.code-snippets"
       }
     ]
   }

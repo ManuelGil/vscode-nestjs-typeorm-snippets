@@ -1,61 +1,61 @@
 {
   "AfterInsert": {
-    "prefix": ["ns_typeorm_deco_after_insert", "@AfterInsert", ""],
+    "prefix": ["ns_typeorm_deco_after_insert", "@AfterInsert"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@AfterInsert()", "afterInsert() {", "  $1", "}", ""]
   },
   "AfterLoad": {
-    "prefix": ["ns_typeorm_deco_after_load", "@AfterLoad", ""],
+    "prefix": ["ns_typeorm_deco_after_load", "@AfterLoad"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@AfterLoad()", "afterLoad() {", "  $1", "}", ""]
   },
   "AfterRecover": {
-    "prefix": ["ns_typeorm_deco_after_recover", "@AfterRecover", ""],
+    "prefix": ["ns_typeorm_deco_after_recover", "@AfterRecover"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@AfterRecover()", "afterRecover() {", "  $1", "}", ""]
   },
   "AfterRemove": {
-    "prefix": ["ns_typeorm_deco_after_remove", "@AfterRemove", ""],
+    "prefix": ["ns_typeorm_deco_after_remove", "@AfterRemove"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@AfterRemove()", "afterRemove() {", "  $1", "}", ""]
   },
   "AfterSoftRemove": {
-    "prefix": ["ns_typeorm_deco_after_soft_remove", "@AfterSoftRemove", ""],
+    "prefix": ["ns_typeorm_deco_after_soft_remove", "@AfterSoftRemove"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@AfterSoftRemove()", "afterSoftRemove() {", "  $1", "}", ""]
   },
   "AfterUpdate": {
-    "prefix": ["ns_typeorm_deco_after_update", "@AfterUpdate", ""],
+    "prefix": ["ns_typeorm_deco_after_update", "@AfterUpdate"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@AfterUpdate()", "afterUpdate() {", "  $1", "}", ""]
   },
   "BeforeInsert": {
-    "prefix": ["ns_typeorm_deco_before_insert", "@BeforeInsert", ""],
+    "prefix": ["ns_typeorm_deco_before_insert", "@BeforeInsert"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@BeforeInsert()", "beforeInsert() {", "  $1", "}", ""]
   },
   "BeforeRecover": {
-    "prefix": ["ns_typeorm_deco_before_recover", "@BeforeRecover", ""],
+    "prefix": ["ns_typeorm_deco_before_recover", "@BeforeRecover"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@BeforeRecover()", "beforeRecover() {", "  $1", "}", ""]
   },
   "BeforeRemove": {
-    "prefix": ["ns_typeorm_deco_before_remove", "@BeforeRemove", ""],
+    "prefix": ["ns_typeorm_deco_before_remove", "@BeforeRemove"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@BeforeRemove()", "beforeRemove() {", "  $1", "}", ""]
   },
   "BeforeSoftRemove": {
-    "prefix": ["ns_typeorm_deco_before_soft_remove", "@BeforeSoftRemove", ""],
+    "prefix": ["ns_typeorm_deco_before_soft_remove", "@BeforeSoftRemove"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@BeforeSoftRemove()", "beforeSoftRemove() {", "  $1", "}", ""]
   },
   "BeforeUpdate": {
-    "prefix": ["ns_typeorm_deco_before_update", "@BeforeUpdate", ""],
+    "prefix": ["ns_typeorm_deco_before_update", "@BeforeUpdate"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@BeforeUpdate()", "beforeUpdate() {", "  $1", "}", ""]
   },
   "EventSubscriber": {
-    "prefix": ["ns_typeorm_deco_event_subscriber", "@EventSubscriber", ""],
+    "prefix": ["ns_typeorm_deco_event_subscriber", "@EventSubscriber"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["@EventSubscriber()", "export class ${1:Subscriber} implements EntitySubscriberInterface<${2:Entity}> {", "  $3", "}", ""]
   }

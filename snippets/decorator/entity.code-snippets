@@ -1,16 +1,16 @@
 {
   "ChildEntity": {
-    "prefix": ["ns_typeorm_deco_child_entity", "@ChildEntity", ""],
+    "prefix": ["ns_typeorm_deco_child_entity", "@ChildEntity"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["import { ChildEntity } from 'typeorm';", "", "@ChildEntity()", "export class ${1:ChildEntity} extends ${2:ParentEntity} {", "  ${3:childField}: ${4:string};", "}", ""]
   },
   "Entity": {
-    "prefix": ["ns_typeorm_deco_entity", "@Entity", ""],
+    "prefix": ["ns_typeorm_deco_entity", "@Entity"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["import { Entity } from 'typeorm';", "", "@Entity()", "export class ${1:Entity} {", "  ${2:field}: ${3:string};", "}", ""]
   },
   "TableInheritance": {
-    "prefix": ["ns_typeorm_deco_table_inheritance", "@TableInheritance", ""],
+    "prefix": ["ns_typeorm_deco_table_inheritance", "@TableInheritance"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["import { TableInheritance } from 'typeorm';", "", "@TableInheritance({ column: { type: 'varchar', name: 'type' } })", "export class ${1:Entity} {", "  ${2:field}: ${3:string};", "}", ""]
   }
