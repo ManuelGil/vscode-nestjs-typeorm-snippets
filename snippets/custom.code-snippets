@@ -1,16 +1,16 @@
 {
   "TypeOrmModule forRoot": {
-    "prefix": ["ns_typeorm_module_root", "@TypeOrmModule"],
+    "prefix": ["ns_typeorm_module_root", "TypeOrmModule"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["TypeOrmModule.forRoot({", "  type: 'mysql',", "  host: 'localhost',", "  port: 3306,", "  username: 'root',", "  password: 'root',", "  database: 'test',", "  entities: [__dirname + '/**/*.entity.ts'],", "  autoLoadEntities: true,", "  synchronize: false,", "}),", ""]
   },
   "TypeOrmModule forRootAsync": {
-    "prefix": ["ns_typeorm_module_root_async", "@TypeOrmModule"],
+    "prefix": ["ns_typeorm_module_root_async", "TypeOrmModule"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["TypeOrmModule.forRootAsync({", "  imports: [ConfigModule],", "  useFactory: async (configService: ConfigService) => ({", "    type: 'mysql',", "    host: configService.get('DB_HOST'),", "    port: configService.get('DB_PORT'),", "    username: configService.get('DB_USERNAME'),", "    password: configService.get('DB_PASSWORD'),", "    database: configService.get('DB_DATABASE'),", "    entities: [__dirname + '/**/*.entity.ts'],", "    autoLoadEntities: true,", "    synchronize: false,", "  }),", "  inject: [ConfigService],", "}),", ""]
   },
   "TypeOrmModule forFeature": {
-    "prefix": ["ns_typeorm_module_feature", "@TypeOrmModule"],
+    "prefix": ["ns_typeorm_module_feature", "TypeOrmModule"],
     "scope": "plaintext,typescript,typescriptreact",
     "body": ["TypeOrmModule.forFeature([", "  $0", "]),", ""]
   },
