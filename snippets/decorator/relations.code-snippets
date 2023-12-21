@@ -1,42 +1,42 @@
 {
   "JoinColumn": {
     "prefix": ["ns_typeorm_deco_join_column", "@JoinColumn"],
-    "scope": "plaintext,typescript,typescriptreact",
+    "scope": "typescript",
     "body": ["@JoinColumn({", "  name: ${1:column_name},", "  referencedColumnName: ${2:referenced_column_name},", "  unique: ${3:false},", "  nullable: ${4:false},", "  onDelete: ${5:'CASCADE'},", "  onUpdate: ${6:'CASCADE'}", "})", ""]
   },
   "JoinTable": {
     "prefix": ["ns_typeorm_deco_join_table", "@JoinTable"],
-    "scope": "plaintext,typescript,typescriptreact",
+    "scope": "typescript",
     "body": ["@JoinTable({", "  name: ${1:table_name},", "  joinColumn: {", "    name: ${2:column_name},", "    referencedColumnName: ${3:referenced_column_name}", "  },", "  inverseJoinColumn: {", "    name: ${4:column_name},", "    referencedColumnName: ${5:referenced_column_name}", "  }", "})", ""]
   },
   "ManyToMany": {
     "prefix": ["ns_typeorm_deco_many_to_many", "@ManyToMany"],
-    "scope": "plaintext,typescript,typescriptreact",
+    "scope": "typescript",
     "body": ["@ManyToMany(type => ${1:Entity}, ${2:alias}, {", "  cascade: ${3:true},", "  eager: ${4:false},", "  lazy: ${5:false},", "  onDelete: ${6:'CASCADE'},", "  onUpdate: ${7:'CASCADE'}", "})", ""]
   },
   "ManyToOne": {
     "prefix": ["ns_typeorm_deco_many_to_one", "@ManyToOne"],
-    "scope": "plaintext,typescript,typescriptreact",
+    "scope": "typescript",
     "body": ["@ManyToOne(type => ${1:Entity}, ${2:alias}, {", "  cascade: ${3:true},", "  eager: ${4:false},", "  lazy: ${5:false},", "  onDelete: ${6:'CASCADE'},", "  onUpdate: ${7:'CASCADE'}", "})", ""]
   },
   "OneToMany": {
     "prefix": ["ns_typeorm_deco_one_to_many", "@OneToMany"],
-    "scope": "plaintext,typescript,typescriptreact",
+    "scope": "typescript",
     "body": ["@OneToMany(type => ${1:Entity}, ${2:alias}, {", "  cascade: ${3:true},", "  eager: ${4:false},", "  lazy: ${5:false},", "  onDelete: ${6:'CASCADE'},", "  onUpdate: ${7:'CASCADE'}", "})", ""]
   },
   "OneToOne": {
     "prefix": ["ns_typeorm_deco_one_to_one", "@OneToOne"],
-    "scope": "plaintext,typescript,typescriptreact",
+    "scope": "typescript",
     "body": ["@OneToOne(type => ${1:Entity}, ${2:alias}, {", "  cascade: ${3:true},", "  eager: ${4:false},", "  lazy: ${5:false},", "  onDelete: ${6:'CASCADE'},", "  onUpdate: ${7:'CASCADE'}", "})", ""]
   },
   "RelationCount": {
     "prefix": ["ns_typeorm_deco_relation_count", "@RelationCount"],
-    "scope": "plaintext,typescript,typescriptreact",
+    "scope": "typescript",
     "body": ["@RelationCount(${1:alias})", ""]
   },
   "RelationId": {
     "prefix": ["ns_typeorm_deco_relation_id", "@RelationId"],
-    "scope": "plaintext,typescript,typescriptreact",
+    "scope": "typescript",
     "body": ["@RelationId(${1:alias})", ""]
   }
 }
