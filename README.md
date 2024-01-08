@@ -1,7 +1,9 @@
 # NestJS TypeORM Snippets for VSCode Editor
 
-[![Latest Release](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-nestjs-typeorm-snippets?style=flat&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets)
-[![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-nestjs-typeorm-snippets)]()
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-nestjs-typeorm-snippets?style=for-the-badge&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/imgildev.vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets)
+[![GitHub Repo stars](https://img.shields.io/github/stars/ManuelGil/vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets)
+[![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/blob/main/LICENSE)
 
 Snippets for TypeORM and NestJS for faster development. This extension for Visual Studio Code adds snippets for TypeORM for NestJS development.
 

@@ -2,41 +2,41 @@
   "JoinColumn": {
     "prefix": ["ns_typeorm_deco_join_column", "@JoinColumn"],
     "scope": "typescript",
-    "body": ["@JoinColumn({", "  name: ${1:column_name},", "  referencedColumnName: ${2:referenced_column_name},", "  unique: ${3:false},", "  nullable: ${4:false},", "  onDelete: ${5:'CASCADE'},", "  onUpdate: ${6:'CASCADE'}", "})", ""]
+    "body": ["@JoinColumn({", "  name: ${1:column_name},", "  referencedColumnName: ${2:referenced_column_name},", "  unique: ${3:false},", "  nullable: ${4:false},", "  onDelete: ${5:'CASCADE'},", "  onUpdate: ${6:'CASCADE'}", "})", "$0"]
   },
   "JoinTable": {
     "prefix": ["ns_typeorm_deco_join_table", "@JoinTable"],
     "scope": "typescript",
-    "body": ["@JoinTable({", "  name: ${1:table_name},", "  joinColumn: {", "    name: ${2:column_name},", "    referencedColumnName: ${3:referenced_column_name}", "  },", "  inverseJoinColumn: {", "    name: ${4:column_name},", "    referencedColumnName: ${5:referenced_column_name}", "  }", "})", ""]
+    "body": ["@JoinTable({", "  name: ${1:table_name},", "  joinColumn: {", "    name: ${2:column_name},", "    referencedColumnName: ${3:referenced_column_name}", "  },", "  inverseJoinColumn: {", "    name: ${4:column_name},", "    referencedColumnName: ${5:referenced_column_name}", "  }", "})", "$0"]
   },
   "ManyToMany": {
     "prefix": ["ns_typeorm_deco_many_to_many", "@ManyToMany"],
     "scope": "typescript",
-    "body": ["@ManyToMany(type => ${1:Entity}, ${2:alias}, {", "  cascade: ${3:true},", "  eager: ${4:false},", "  lazy: ${5:false},", "  onDelete: ${6:'CASCADE'},", "  onUpdate: ${7:'CASCADE'}", "})", ""]
+    "body": ["@ManyToMany((${1:type}) => ${2:Entity}, (${3:alias}) => ${4:alias}.${5:relation}, {", "  eager: ${6:false},", "  lazy: ${7:false},", "  cascade: ${8:true},", "  onDelete: '${9:CASCADE}',", "  onUpdate: '${10:CASCADE}',", "orphanedRowAction: '${11:delete}',", "})", "$0"]
   },
   "ManyToOne": {
     "prefix": ["ns_typeorm_deco_many_to_one", "@ManyToOne"],
     "scope": "typescript",
-    "body": ["@ManyToOne(type => ${1:Entity}, ${2:alias}, {", "  cascade: ${3:true},", "  eager: ${4:false},", "  lazy: ${5:false},", "  onDelete: ${6:'CASCADE'},", "  onUpdate: ${7:'CASCADE'}", "})", ""]
+    "body": ["@ManyToOne((${1:type}) => ${2:Entity}, (${3:alias}) => ${4:alias}.${5:relation}, {", "  eager: ${6:false},", "  lazy: ${7:false},", "  cascade: ${8:true},", "  onDelete: '${9:CASCADE}',", "  onUpdate: '${10:CASCADE}',", "orphanedRowAction: '${11:delete}',", "})", "$0"]
   },
   "OneToMany": {
     "prefix": ["ns_typeorm_deco_one_to_many", "@OneToMany"],
     "scope": "typescript",
-    "body": ["@OneToMany(type => ${1:Entity}, ${2:alias}, {", "  cascade: ${3:true},", "  eager: ${4:false},", "  lazy: ${5:false},", "  onDelete: ${6:'CASCADE'},", "  onUpdate: ${7:'CASCADE'}", "})", ""]
+    "body": ["@OneToMany((${1:type}) => ${2:Entity}, (${3:alias}) => ${4:alias}.${5:relation}, {", "  eager: ${6:false},", "  lazy: ${7:false},", "  cascade: ${8:true},", "  onDelete: '${9:CASCADE}',", "  onUpdate: '${10:CASCADE}',", "orphanedRowAction: '${11:delete}',", "})", "$0"]
   },
   "OneToOne": {
     "prefix": ["ns_typeorm_deco_one_to_one", "@OneToOne"],
     "scope": "typescript",
-    "body": ["@OneToOne(type => ${1:Entity}, ${2:alias}, {", "  cascade: ${3:true},", "  eager: ${4:false},", "  lazy: ${5:false},", "  onDelete: ${6:'CASCADE'},", "  onUpdate: ${7:'CASCADE'}", "})", ""]
+    "body": ["@OneToOne((${1:type}) => ${2:Entity}, (${3:alias}) => ${4:alias}.${5:relation}, {", "  eager: ${6:false},", "  lazy: ${7:false},", "  cascade: ${8:true},", "  onDelete: '${9:CASCADE}',", "  onUpdate: '${10:CASCADE}',", "orphanedRowAction: '${11:delete}',", "})", "$0"]
   },
   "RelationCount": {
     "prefix": ["ns_typeorm_deco_relation_count", "@RelationCount"],
     "scope": "typescript",
-    "body": ["@RelationCount(${1:alias})", ""]
+    "body": ["@RelationCount(${1:alias})", "$0"]
   },
   "RelationId": {
     "prefix": ["ns_typeorm_deco_relation_id", "@RelationId"],
     "scope": "typescript",
-    "body": ["@RelationId(${1:alias})", ""]
+    "body": ["@RelationId(${1:alias})", "$0"]
   }
 }

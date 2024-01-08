@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2024-01-08
+
+### Added
+
+- Add base entity snippet
+
+### Changed
+
+- Improve decorators snippets
+
 ## [1.1.2] - 2023-12-21
 
 ### Fixed
@@ -39,7 +49,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/compare/v1.1.2...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/compare/v1.1.2...v1.2.0
 [1.1.2]: https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/compare/v1.0.1...v1.1.0
