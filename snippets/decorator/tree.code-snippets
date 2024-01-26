@@ -1,20 +1,20 @@
 {
-  "Tree": {
+  "TypeORM Tree": {
     "prefix": ["ns_typeorm_deco_tree", "@Tree"],
     "scope": "typescript",
     "body": ["@Tree('${1:tableName}')", "export class ${2:EntityName} {", "  @PrimaryGeneratedColumn()", "  id: number;", "", "  @TreeParent()", "  parent: ${2:EntityName};", "", "  @TreeChildren()", "  children: ${2:EntityName}[];", "}", "$0"]
   },
-  "TreeChildren": {
+  "TypeORM TreeChildren": {
     "prefix": ["ns_typeorm_deco_tree", "@TreeChildren"],
     "scope": "typescript",
     "body": ["@TreeChildren()", "children: ${1:EntityName}[];", "$0"]
   },
-  "TreeLevelColumn": {
+  "TypeORM TreeLevelColumn": {
     "prefix": ["ns_typeorm_deco_tree", "@TreeLevelColumn"],
     "scope": "typescript",
     "body": ["@TreeLevelColumn()", "level: number;", "$0"]
   },
-  "TreeParent": {
+  "TypeORM TreeParent": {
     "prefix": ["ns_typeorm_deco_tree", "@TreeParent"],
     "scope": "typescript",
     "body": ["@TreeParent()", "parent: ${1:EntityName};", "$0"]

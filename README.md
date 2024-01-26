@@ -2,6 +2,8 @@
 
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-nestjs-typeorm-snippets?style=for-the-badge&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets)
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/imgildev.vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets)
+[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/imgildev.vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets)
+[![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/imgildev.vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets&ssr=false#review-details)
 [![GitHub Repo stars](https://img.shields.io/github/stars/ManuelGil/vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/blob/main/LICENSE)
 
@@ -59,6 +61,11 @@ Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is 
 | ns_typeorm_deco_tree | @TreeChildren |
 | ns_typeorm_deco_tree | @TreeLevelColumn |
 | ns_typeorm_deco_tree | @TreeParent |
+
+## Connect with me
+
+[![GitHub followers](https://img.shields.io/github/followers/ManuelGil?style=for-the-badge&logo=github)](https://github.com/ManuelGil)
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/imgildev?style=for-the-badge&logo=x)](https://twitter.com/imgildev)
 
 ## Other Extensions
 

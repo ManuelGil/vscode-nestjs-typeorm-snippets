@@ -14,12 +14,12 @@
     "scope": "typescript",
     "body": ["TypeOrmModule.forFeature([", "  $0", "]),", ""]
   },
-  "Entity Base": {
+  "TypeORM Entity Base": {
     "prefix": ["ns_typeorm_deco_entity", "@Entity"],
     "scope": "typescript",
     "body": ["import {", "  Column,", "  CreateDateColumn,", "  DeleteDateColumn,", "  PrimaryGeneratedColumn,", "  UpdateDateColumn,", "} from 'typeorm';", "", "export abstract class BaseEntity {", "  @PrimaryGeneratedColumn()", "  id: number;", "", "  @Column({", "    type: 'varchar',", "    length: 100,", "  })", "  name: string;", "", "  @Column({", "    name: 'is_activated',", "    type: 'boolean',", "    default: true,", "  })", "  isActivated: boolean;", "", "  @CreateDateColumn({", "    name: 'created_at',", "    type: 'timestamp',", "    default: () => 'CURRENT_TIMESTAMP',", "  })", "  createdAt: Date;", "", "  @UpdateDateColumn({", "    name: 'updated_at',", "    type: 'timestamp',", "    default: () => 'CURRENT_TIMESTAMP',", "  })", "  updatedAt: Date;", "", "  @DeleteDateColumn({", "    name: 'deleted_at',", "    type: 'timestamp',", "    nullable: true,", "    default: null,", "  })", "  deletedAt: Date;", "}", ""]
   },
-  "Column enum": {
+  "TypeORM Column enum": {
     "prefix": ["ns_typeorm_deco_column_enum", "@Column enum"],
     "scope": "typescript",
     "body": ["@Column({", "  name: '${1:name}',", "  type: 'enum',", "  enum: ${2:type},", "  default: ${2:type}.${3:value},", "})", "$0"]

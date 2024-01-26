@@ -1,5 +1,5 @@
 {
-  "ViewEntity": {
+  "TypeORM ViewEntity": {
     "prefix": ["ns_typeorm_deco_view_entity", "@ViewEntity"],
     "scope": "typescript",
     "body": ["@ViewEntity()", "export class ${1:EntityName} {", "  @ViewColumn()", "  ${2:column_name}: ${3:column_type};", "}", ""]
