@@ -1,52 +1,62 @@
 {
   "TypeORM Column": {
     "prefix": ["ns_typeorm_deco_column", "@Column"],
+    "description": "@Column with common options (name, type, length, nullability)",
     "scope": "typescript",
-    "body": ["@Column({", "  name: '${1:name}',", "  type: '${2:type}',", "  length: ${3:length},", "  nullable: true,", "  default: null,", "})", "$0"]
+    "body": ["@Column({", "  name: '${1:name}',", "  type: '${2|varchar,int,uuid,boolean,text,date,timestamp|}',", "  length: ${3:length},", "  nullable: true,", "  default: null,", "})", "$0"]
   },
   "TypeORM CreateDateColumn": {
     "prefix": ["ns_typeorm_deco_create_date_column", "@CreateDateColumn"],
+    "description": "Timestamp column automatically set on insert",
     "scope": "typescript",
-    "body": ["@CreateDateColumn({", "  name: '${1:name}',", "  type: 'timestamp',", "  default: () => 'CURRENT_TIMESTAMP',", "})", "$0"]
+    "body": ["@CreateDateColumn({", "  name: '${1:name}',", "  type: 'timestamp',", "  precision: ${2:3},", "})", "$0"]
   },
   "TypeORM UpdateDateColumn": {
     "prefix": ["ns_typeorm_deco_update_date_column", "@UpdateDateColumn"],
+    "description": "Timestamp column automatically updated on save",
     "scope": "typescript",
-    "body": ["@UpdateDateColumn({", "  name: '${1:name}',", "  type: 'timestamp',", "  default: () => 'CURRENT_TIMESTAMP',", "})", "$0"]
+    "body": ["@UpdateDateColumn({", "  name: '${1:name}',", "  type: 'timestamp',", "  precision: ${2:3},", "})", "$0"]
   },
   "TypeORM DeleteDateColumn": {
     "prefix": ["ns_typeorm_deco_delete_date_column", "@DeleteDateColumn"],
+    "description": "Soft-delete timestamp column (nullable)",
     "scope": "typescript",
     "body": ["@DeleteDateColumn({", "  name: '${1:name}',", "  type: 'timestamp',", "  nullable: true,", "  default: null,", "})", "$0"]
   },
   "TypeORM ObjectIdColumn": {
     "prefix": ["ns_typeorm_deco_object_id_column", "@ObjectIdColumn"],
+    "description": "MongoDB ObjectId primary column",
     "scope": "typescript",
-    "body": ["@ObjectIdColumn({", "  name: '${1:name}',", "  nullable: true,", "  default: null,", "})", "$0"]
+    "body": ["@ObjectIdColumn()", "$0"]
   },
   "TypeORM PrimaryColumn": {
     "prefix": ["ns_typeorm_deco_primary_column", "@PrimaryColumn"],
+    "description": "Manually assigned primary column",
     "scope": "typescript",
     "body": ["@PrimaryColumn({", "  name: '${1:name}',", "  type: '${2:type}',", "  length: ${3:length},", "  nullable: true,", "  default: null,", "})", "$0"]
   },
   "TypeORM PrimaryGeneratedColumn": {
     "prefix": ["ns_typeorm_deco_primary_generated_column", "@PrimaryGeneratedColumn"],
+    "description": "Auto-increment primary key (strategy configurable)",
     "scope": "typescript",
-    "body": "@PrimaryGeneratedColumn($0)"
+    "body": ["@PrimaryGeneratedColumn('${1|increment,uuid,identity,rowid|}')", "$0"]
   },
   "TypeORM VersionColumn": {
     "prefix": ["ns_typeorm_deco_version_column", "@VersionColumn"],
+    "description": "Version column for optimistic locking",
     "scope": "typescript",
-    "body": ["@VersionColumn({", "  name: '${1:name}',", "  type: 'int',", "  default: 1,", "})", "$0"]
+    "body": ["@VersionColumn()", "$0"]
   },
   "TypeORM ViewColumn": {
     "prefix": ["ns_typeorm_deco_view_column", "@ViewColumn"],
+    "description": "Column mapping for a ViewEntity",
     "scope": "typescript",
     "body": ["@ViewColumn({", "  name: '${1:name}',", "  type: '${2:type}',", "  length: ${3:length},", "  nullable: true,", "  default: null,", "})", "$0"]
   },
   "TypeORM VirtualColumn": {
     "prefix": ["ns_typeorm_deco_virtual_column", "@VirtualColumn"],
+    "description": "Virtual (computed) column declaration",
     "scope": "typescript",
-    "body": ["@VirtualColumn({", "  name: '${1:name}',", "  type: '${2:type}',", "  length: ${3:length},", "  nullable: true,", "  default: null,", "})", "$0"]
+    "body": ["@VirtualColumn({", "  query: (alias) => '...'", "})", "$0"]
   }
 }

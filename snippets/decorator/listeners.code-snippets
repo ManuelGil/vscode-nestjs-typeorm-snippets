@@ -1,62 +1,74 @@
 {
   "TypeORM AfterInsert": {
     "prefix": ["ns_typeorm_deco_after_insert", "@AfterInsert"],
+    "description": "Lifecycle hook executed after entity insertion",
     "scope": "typescript",
-    "body": ["@AfterInsert()", "afterInsert() {", "  $1", "}", ""]
+    "body": ["@AfterInsert()", "afterInsert() {", "  $1", "}", "", "$0"]
   },
   "TypeORM AfterLoad": {
     "prefix": ["ns_typeorm_deco_after_load", "@AfterLoad"],
+    "description": "Lifecycle hook executed after entity is loaded from DB",
     "scope": "typescript",
-    "body": ["@AfterLoad()", "afterLoad() {", "  $1", "}", ""]
+    "body": ["@AfterLoad()", "afterLoad() {", "  $1", "}", "", "$0"]
   },
   "TypeORM AfterRecover": {
     "prefix": ["ns_typeorm_deco_after_recover", "@AfterRecover"],
+    "description": "Lifecycle hook executed after entity is recovered (soft-delete)",
     "scope": "typescript",
-    "body": ["@AfterRecover()", "afterRecover() {", "  $1", "}", ""]
+    "body": ["@AfterRecover()", "afterRecover() {", "  $1", "}", "", "$0"]
   },
   "TypeORM AfterRemove": {
     "prefix": ["ns_typeorm_deco_after_remove", "@AfterRemove"],
+    "description": "Lifecycle hook executed after entity removal",
     "scope": "typescript",
-    "body": ["@AfterRemove()", "afterRemove() {", "  $1", "}", ""]
+    "body": ["@AfterRemove()", "afterRemove() {", "  $1", "}", "", "$0"]
   },
   "TypeORM AfterSoftRemove": {
     "prefix": ["ns_typeorm_deco_after_soft_remove", "@AfterSoftRemove"],
+    "description": "Lifecycle hook executed after soft removal",
     "scope": "typescript",
-    "body": ["@AfterSoftRemove()", "afterSoftRemove() {", "  $1", "}", ""]
+    "body": ["@AfterSoftRemove()", "afterSoftRemove() {", "  $1", "}", "", "$0"]
   },
   "TypeORM AfterUpdate": {
     "prefix": ["ns_typeorm_deco_after_update", "@AfterUpdate"],
+    "description": "Lifecycle hook executed after entity update",
     "scope": "typescript",
-    "body": ["@AfterUpdate()", "afterUpdate() {", "  $1", "}", ""]
+    "body": ["@AfterUpdate()", "afterUpdate() {", "  $1", "}", "", "$0"]
   },
   "TypeORM BeforeInsert": {
     "prefix": ["ns_typeorm_deco_before_insert", "@BeforeInsert"],
+    "description": "Lifecycle hook executed before entity insertion",
     "scope": "typescript",
-    "body": ["@BeforeInsert()", "beforeInsert() {", "  $1", "}", ""]
+    "body": ["@BeforeInsert()", "beforeInsert() {", "  $1", "}", "", "$0"]
   },
   "TypeORM BeforeRecover": {
     "prefix": ["ns_typeorm_deco_before_recover", "@BeforeRecover"],
+    "description": "Lifecycle hook executed before entity recovery (soft-delete)",
     "scope": "typescript",
-    "body": ["@BeforeRecover()", "beforeRecover() {", "  $1", "}", ""]
+    "body": ["@BeforeRecover()", "beforeRecover() {", "  $1", "}", "", "$0"]
   },
   "TypeORM BeforeRemove": {
     "prefix": ["ns_typeorm_deco_before_remove", "@BeforeRemove"],
+    "description": "Lifecycle hook executed before entity removal",
     "scope": "typescript",
-    "body": ["@BeforeRemove()", "beforeRemove() {", "  $1", "}", ""]
+    "body": ["@BeforeRemove()", "beforeRemove() {", "  $1", "}", "", "$0"]
   },
   "TypeORM BeforeSoftRemove": {
     "prefix": ["ns_typeorm_deco_before_soft_remove", "@BeforeSoftRemove"],
+    "description": "Lifecycle hook executed before soft removal",
     "scope": "typescript",
-    "body": ["@BeforeSoftRemove()", "beforeSoftRemove() {", "  $1", "}", ""]
+    "body": ["@BeforeSoftRemove()", "beforeSoftRemove() {", "  $1", "}", "", "$0"]
   },
   "TypeORM BeforeUpdate": {
     "prefix": ["ns_typeorm_deco_before_update", "@BeforeUpdate"],
+    "description": "Lifecycle hook executed before entity update",
     "scope": "typescript",
-    "body": ["@BeforeUpdate()", "beforeUpdate() {", "  $1", "}", ""]
+    "body": ["@BeforeUpdate()", "beforeUpdate() {", "  $1", "}", "", "$0"]
   },
   "TypeORM EventSubscriber": {
     "prefix": ["ns_typeorm_deco_event_subscriber", "@EventSubscriber"],
+    "description": "Event subscriber class implementing EntitySubscriberInterface<T>",
     "scope": "typescript",
-    "body": ["@EventSubscriber()", "export class ${1:Subscriber} implements EntitySubscriberInterface<${2:Entity}> {", "  $3", "}", ""]
+    "body": ["import { EventSubscriber, EntitySubscriberInterface } from 'typeorm';", "", "@EventSubscriber()", "export class ${1:Subscriber} implements EntitySubscriberInterface<${2:Entity}> {", "  $3", "}", "", "$0"]
   }
 }

@@ -1,26 +1,31 @@
 {
   "TypeOrmModule forRoot": {
-    "prefix": ["ns_typeorm_module_root", "TypeOrmModule"],
+    "prefix": ["ns_typeorm_module_root"],
+    "description": "NestJS TypeOrmModule.forRoot() template with common options",
     "scope": "typescript",
-    "body": ["TypeOrmModule.forRoot({", "  type: 'mysql',", "  host: 'localhost',", "  port: 3306,", "  username: 'root',", "  password: 'root',", "  database: 'test',", "  entities: [__dirname + '/**/*.entity.ts'],", "  autoLoadEntities: true,", "  synchronize: false,", "}),", ""]
+    "body": ["TypeOrmModule.forRoot({", "  type: '${1|postgres,mysql,mariadb,sqlite,mssql,oracle|}',", "  host: 'localhost',", "  port: 3306,", "  username: 'root',", "  password: 'root',", "  database: 'test',", "  entities: [__dirname + '/**/*.entity{.ts,.js}'],", "  autoLoadEntities: true,", "  synchronize: false,", "}),", ""]
   },
   "TypeOrmModule forRootAsync": {
-    "prefix": ["ns_typeorm_module_root_async", "TypeOrmModule"],
+    "prefix": ["ns_typeorm_module_root_async"],
+    "description": "NestJS TypeOrmModule.forRootAsync() with ConfigModule/ConfigService",
     "scope": "typescript",
-    "body": ["TypeOrmModule.forRootAsync({", "  imports: [ConfigModule],", "  useFactory: async (configService: ConfigService) => ({", "    type: 'mysql',", "    host: configService.get('DB_HOST'),", "    port: configService.get('DB_PORT'),", "    username: configService.get('DB_USERNAME'),", "    password: configService.get('DB_PASSWORD'),", "    database: configService.get('DB_DATABASE'),", "    entities: [__dirname + '/**/*.entity.ts'],", "    autoLoadEntities: true,", "    synchronize: false,", "  }),", "  inject: [ConfigService],", "}),", ""]
+    "body": ["TypeOrmModule.forRootAsync({", "  imports: [ConfigModule],", "  useFactory: async (configService: ConfigService) => ({", "    type: '${1|postgres,mysql,mariadb,sqlite,mssql,oracle|}',", "    host: configService.get('DB_HOST'),", "    port: configService.get('DB_PORT'),", "    username: configService.get('DB_USERNAME'),", "    password: configService.get('DB_PASSWORD'),", "    database: configService.get('DB_DATABASE'),", "    entities: [__dirname + '/**/*.entity{.ts,.js}'],", "    autoLoadEntities: true,", "    synchronize: false,", "  }),", "  inject: [ConfigService],", "}),", ""]
   },
   "TypeOrmModule forFeature": {
-    "prefix": ["ns_typeorm_module_feature", "TypeOrmModule"],
+    "prefix": ["ns_typeorm_module_feature"],
+    "description": "Register repositories for the given entities in the current module",
     "scope": "typescript",
     "body": ["TypeOrmModule.forFeature([", "  $0", "]),", ""]
   },
   "TypeORM Entity Base": {
-    "prefix": ["ns_typeorm_deco_entity", "@Entity"],
+    "prefix": ["ns_typeorm_base_entity"],
+    "description": "Abstract base entity with id, name, activation and timestamp columns",
     "scope": "typescript",
     "body": ["import {", "  Column,", "  CreateDateColumn,", "  DeleteDateColumn,", "  PrimaryGeneratedColumn,", "  UpdateDateColumn,", "} from 'typeorm';", "", "export abstract class BaseEntity {", "  @PrimaryGeneratedColumn()", "  id: number;", "", "  @Column({", "    type: 'varchar',", "    length: 100,", "  })", "  name: string;", "", "  @Column({", "    name: 'is_activated',", "    type: 'boolean',", "    default: true,", "  })", "  isActivated: boolean;", "", "  @CreateDateColumn({", "    name: 'created_at',", "    type: 'timestamp',", "    default: () => 'CURRENT_TIMESTAMP',", "  })", "  createdAt: Date;", "", "  @UpdateDateColumn({", "    name: 'updated_at',", "    type: 'timestamp',", "    default: () => 'CURRENT_TIMESTAMP',", "  })", "  updatedAt: Date;", "", "  @DeleteDateColumn({", "    name: 'deleted_at',", "    type: 'timestamp',", "    nullable: true,", "    default: null,", "  })", "  deletedAt: Date;", "}", ""]
   },
   "TypeORM Column enum": {
-    "prefix": ["ns_typeorm_deco_column_enum", "@Column enum"],
+    "prefix": ["ns_typeorm_deco_column_enum"],
+    "description": "Enum column with default value",
     "scope": "typescript",
     "body": ["@Column({", "  name: '${1:name}',", "  type: 'enum',", "  enum: ${2:type},", "  default: ${2:type}.${3:value},", "})", "$0"]
   }

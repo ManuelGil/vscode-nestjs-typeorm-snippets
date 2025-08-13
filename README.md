@@ -1,4 +1,4 @@
-# NestJS TypeORM Snippets for VSCode Editor
+# NestJS TypeORM Snippets
 
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-nestjs-typeorm-snippets?style=for-the-badge&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets)
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/imgildev.vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets)
@@ -7,88 +7,120 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/ManuelGil/vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-nestjs-typeorm-snippets?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/blob/main/LICENSE)
 
-Snippets for TypeORM and NestJS for faster development. This extension for Visual Studio Code adds snippets for TypeORM for NestJS development.
+> Snippets for TypeORM and NestJS to speed up development — ready-to-use decorators, entity scaffolds, lifecycle hooks, relations, module wiring, and common TypeORM patterns.
+
+## Overview
+
+This Visual Studio Code extension provides a curated collection of TypeScript-first snippets for using TypeORM within NestJS applications. Quickly scaffold entities, decorators, relations, subscribers, module wiring, and common repository patterns with smart placeholders.
 
 ## Requirements
 
-- VSCode 1.46.0 or later
+- Visual Studio Code 1.46.0 or later
+
+## Installation
+
+1. Open Visual Studio Code.
+2. Open the **Extensions** view (`Ctrl+Shift+X` / `⌘+Shift+X`).
+3. Search for **NestJS TypeORM Snippets** or install directly from the [Marketplace page](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-typeorm-snippets).
+4. Click **Install** and reload the editor if prompted.
 
 ## Usage
 
-### Snippets
+Type part of a snippet prefix and press `Tab` or `Enter` to expand it. Snippets are scoped to TypeScript files by default.
 
-![demo](https://raw.githubusercontent.com/ManuelGil/vscode-nestjs-typeorm-snippets/main/docs/images/demo.gif)
+### Selected snippets
 
-Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is a list of the most important shortcuts.
+| Snippet                                                       | Purpose                             |
+| ------------------------------------------------------------- | ----------------------------------- |
+| `ns_typeorm_deco_entity`                                      | `@Entity()` — scaffold entity class |
+| `ns_typeorm_deco_column`                                      | `@Column()`                         |
+| `ns_typeorm_deco_primary_generated_column`                    | `@PrimaryGeneratedColumn()`         |
+| `ns_typeorm_deco_create_date_column`                          | `@CreateDateColumn()`               |
+| `ns_typeorm_deco_update_date_column`                          | `@UpdateDateColumn()`               |
+| `ns_typeorm_deco_delete_date_column`                          | `@DeleteDateColumn()`               |
+| `ns_typeorm_deco_many_to_one` / `ns_typeorm_deco_one_to_many` | Relation decorators                 |
+| `ns_typeorm_deco_join_column`                                 | `@JoinColumn()`                     |
+| `ns_typeorm_deco_many_to_many` / `ns_typeorm_deco_join_table` | Many-to-many with join table        |
+| `ns_typeorm_deco_primary_column`                              | `@PrimaryColumn()`                  |
+| `ns_typeorm_deco_version_column`                              | `@VersionColumn()`                  |
+| `ns_typeorm_deco_view_entity`                                 | `@ViewEntity()` / `@ViewColumn()`   |
+| `ns_typeorm_deco_event_subscriber`                            | `@EventSubscriber()`                |
+| `ns_typeorm_module_root`                                      | `TypeOrmModule.forRoot(...)`        |
+| `ns_typeorm_module_feature`                                   | `TypeOrmModule.forFeature([...])`   |
+| `ns_typeorm_base_entity`                                      | Base entity class scaffold          |
 
-| Snippet | Purpose |
-| --- | --- |
-| ns_typeorm_deco_column | @Column |
-| ns_typeorm_deco_create_date_column | @CreateDateColumn |
-| ns_typeorm_deco_update_date_column | @UpdateDateColumn |
-| ns_typeorm_deco_delete_date_column | @DeleteDateColumn |
-| ns_typeorm_deco_object_id_column | @ObjectIdColumn |
-| ns_typeorm_deco_primary_column | @PrimaryColumn |
-| ns_typeorm_deco_primary_generated_column | @PrimaryGeneratedColumn |
-| ns_typeorm_deco_version_column | @VersionColumn |
-| ns_typeorm_deco_view_column | @ViewColumn |
-| ns_typeorm_deco_virtual_column | @VirtualColumn |
-| ns_typeorm_deco_view_entity | @ViewEntity |
-| ns_typeorm_deco_child_entity | @ChildEntity |
-| ns_typeorm_deco_entity | @Entity |
-| ns_typeorm_deco_table_inheritance | @TableInheritance |
-| ns_typeorm_deco_after_insert | @AfterInsert |
-| ns_typeorm_deco_after_load | @AfterLoad |
-| ns_typeorm_deco_after_recover | @AfterRecover |
-| ns_typeorm_deco_after_remove | @AfterRemove |
-| ns_typeorm_deco_after_soft_remove | @AfterSoftRemove |
-| ns_typeorm_deco_after_update | @AfterUpdate |
-| ns_typeorm_deco_before_insert | @BeforeInsert |
-| ns_typeorm_deco_before_recover | @BeforeRecover |
-| ns_typeorm_deco_before_remove | @BeforeRemove |
-| ns_typeorm_deco_before_soft_remove | @BeforeSoftRemove |
-| ns_typeorm_deco_before_update | @BeforeUpdate |
-| ns_typeorm_deco_event_subscriber | @EventSubscriber |
-| ns_typeorm_deco_join_column | @JoinColumn |
-| ns_typeorm_deco_join_table | @JoinTable |
-| ns_typeorm_deco_many_to_many | @ManyToMany |
-| ns_typeorm_deco_many_to_one | @ManyToOne |
-| ns_typeorm_deco_one_to_many | @OneToMany |
-| ns_typeorm_deco_one_to_one | @OneToOne |
-| ns_typeorm_deco_relation_count | @RelationCount |
-| ns_typeorm_deco_relation_id | @RelationId |
-| ns_typeorm_deco_tree | @Tree |
-| ns_typeorm_deco_tree | @TreeChildren |
-| ns_typeorm_deco_tree | @TreeLevelColumn |
-| ns_typeorm_deco_tree | @TreeParent |
+## Contributing
 
-## Connect with me
+Contributions to the NestJS TypeORM Snippets are welcome and appreciated. To contribute:
 
-[![GitHub followers](https://img.shields.io/github/followers/ManuelGil?style=for-the-badge&logo=github)](https://github.com/ManuelGil)
-[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/imgildev?style=for-the-badge&logo=x)](https://twitter.com/imgildev)
+1. Fork the [GitHub repository](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets).
+2. Create a new branch for your feature or fix:
 
-## Other Extensions
+   ```bash
+   git checkout -b feature/your-feature
+   ```
 
-- [NestJS File Generator for VSCode](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-generator)
-- [NestJS Snippets for VSCode Editor](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-snippets-extension)
-- [Angular File Generator for VSCode Editor](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-angular-generator)
-- [React / NextJS / T3 Stack File Generator](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
-- [Nx / Angular / Nest / Next Essential Extension Pack](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nx-pack)
-- [CodeIgniter 4 Snippets for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-shield-snippets)
-- [CodeIgniter 4 Spark for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-shield-spark)
-- [Moodle Pack](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-moodle-snippets)
-- [Mustache Template Engine - Snippets & Autocomplete](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
+3. Make your changes, commit them, and push to your fork.
+4. Submit a Pull Request targeting the `main` branch.
+
+Before contributing, please review the [Contribution Guidelines](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/blob/main/CONTRIBUTING.md) for coding standards, testing, and commit message conventions. If you encounter a bug or wish to request a new feature, please open an Issue.
 
 ## Changelog
 
-See [CHANGELOG.md](./CHANGELOG.md)
+For a complete list of changes, see the [CHANGELOG.md](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/blob/main/CHANGELOG.md).
 
 ## Authors
 
-- **Manuel Gil** - _Owner_ - [ManuelGil](https://github.com/ManuelGil)
+- **Manuel Gil** - _Owner_ - [@ManuelGil](https://github.com/ManuelGil)
 
-See also the list of [contributors](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/contributors) who participated in this project.
+For a complete list of contributors, please refer to the [contributors](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/contributors) page.
+
+## Follow Me
+
+- **GitHub**: [![GitHub followers](https://img.shields.io/github/followers/ManuelGil?style=for-the-badge\&logo=github)](https://github.com/ManuelGil)
+- **X (formerly Twitter)**: [![X Follow](https://img.shields.io/twitter/follow/imgildev?style=for-the-badge\&logo=x)](https://twitter.com/imgildev)
+
+## Other Extensions
+
+- **[Auto Barrel](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-auto-barrel)**
+  Automatically generates and maintains barrel (`index.ts`) files for your TypeScript projects.
+
+- **[Angular File Generator](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-angular-generator)**
+  Generates boilerplate and navigates your Angular (9→20+) project from within the editor, with commands for components, services, directives, modules, pipes, guards, reactive snippets, and JSON2TS transformations.
+
+- **[NestJS File Generator](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-generator)**
+  Simplifies creation of controllers, services, modules, and more for NestJS projects, with custom commands and Swagger snippets.
+
+- **[NestJS Snippets](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-snippets-extension)**
+  Ready-to-use code patterns for creating controllers, services, modules, DTOs, filters, interceptors, and more in NestJS.
+
+- **[T3 Stack / NextJS / ReactJS File Generator](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)**
+  Automates file creation (components, pages, hooks, API routes, etc.) in T3 Stack (Next.js, React) projects and can start your dev server from VSCode.
+
+- **[Drizzle ORM Snippets](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-drizzle-snippets)**
+  Collection of code snippets to speed up Drizzle ORM usage, defines schemas, migrations, and common database operations in TypeScript/JavaScript.
+
+- **[CodeIgniter 4 Spark](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-spark)**
+  Scaffolds controllers, models, migrations, libraries, and CLI commands in CodeIgniter 4 projects using Spark, directly from the editor.
+
+- **[CodeIgniter 4 Snippets](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-snippets)**
+  Snippets for accelerating development with CodeIgniter 4, including controllers, models, validations, and more.
+
+- **[CodeIgniter 4 Shield Snippets](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-shield-snippets)**
+  Snippets tailored to CodeIgniter 4 Shield for faster authentication and security-related code.
+
+- **[Mustache Template Engine - Snippets & Autocomplete](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)**
+  Snippets and autocomplete support for Mustache templates, making HTML templating faster and more reliable.
+
+## Recommended Browser Extension
+
+For developers who work with `.vsix` files for offline installations or distribution, the complementary [**One-Click VSIX**](https://chromewebstore.google.com/detail/imojppdbcecfpeafjagncfplelddhigc?utm_source=item-share-cb) extension is recommended, available for both Chrome and Firefox.
+
+> **One-Click VSIX** integrates a direct "Download Extension" button into each VSCode Marketplace page, ensuring the file is saved with the `.vsix` extension, even if the server provides a `.zip` archive. This simplifies the process of installing or sharing extensions offline by eliminating the need for manual file renaming.
+
+- [Get One-Click VSIX for Chrome &rarr;](https://chromewebstore.google.com/detail/imojppdbcecfpeafjagncfplelddhigc?utm_source=item-share-cb)
+- [Get One-Click VSIX for Firefox &rarr;](https://addons.mozilla.org/es-ES/firefox/addon/one-click-vsix/)
 
 ## License
 
-NestJS TypeORM Snippets for VSCode is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for details.
+This project is licensed under the **MIT License**. See the [LICENSE](https://github.com/ManuelGil/vscode-nestjs-typeorm-snippets/blob/main/LICENSE) file for full details.

@@ -1,17 +1,20 @@
 {
   "TypeORM ChildEntity": {
     "prefix": ["ns_typeorm_deco_child_entity", "@ChildEntity"],
+    "description": "ChildEntity class extending a parent entity (single table inheritance)",
     "scope": "typescript",
-    "body": ["import { ChildEntity } from 'typeorm';", "", "@ChildEntity()", "export class ${1:ChildEntity} extends ${2:ParentEntity} {", "  ${3:childField}: ${4:string};", "}", ""]
+    "body": ["import { ChildEntity } from 'typeorm';", "", "@ChildEntity()", "export class ${1:ChildEntity} extends ${2:ParentEntity} {", "  ${3:childField}: ${4:string};", "}", "", "$0"]
   },
   "TypeORM Entity": {
     "prefix": ["ns_typeorm_deco_entity", "@Entity"],
+    "description": "Basic @Entity class scaffold",
     "scope": "typescript",
-    "body": ["import { Entity } from 'typeorm';", "", "@Entity()", "export class ${1:Entity} {", "  ${2:field}: ${3:string};", "}", ""]
+    "body": ["import { Entity } from 'typeorm';", "", "@Entity()", "export class ${1:Entity} {", "  ${2:field}: ${3:string};", "}", "", "$0"]
   },
   "TypeORM TableInheritance": {
     "prefix": ["ns_typeorm_deco_table_inheritance", "@TableInheritance"],
+    "description": "Table inheritance strategy declaration for entities",
     "scope": "typescript",
-    "body": ["import { TableInheritance } from 'typeorm';", "", "@TableInheritance({ column: { type: 'varchar', name: 'type' } })", "export class ${1:Entity} {", "  ${2:field}: ${3:string};", "}", ""]
+    "body": ["import { TableInheritance } from 'typeorm';", "", "@TableInheritance({ column: { type: 'varchar', name: 'type' } })", "export class ${1:Entity} {", "  ${2:field}: ${3:string};", "}", "", "$0"]
   }
 }

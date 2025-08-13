@@ -1,7 +1,8 @@
 {
   "TypeORM ViewEntity": {
     "prefix": ["ns_typeorm_deco_view_entity", "@ViewEntity"],
+    "description": "ViewEntity scaffold with a sample ViewColumn",
     "scope": "typescript",
-    "body": ["@ViewEntity()", "export class ${1:EntityName} {", "  @ViewColumn()", "  ${2:column_name}: ${3:column_type};", "}", ""]
+    "body": ["import { ViewEntity, ViewColumn } from 'typeorm';", "", "@ViewEntity()", "export class ${1:EntityName} {", "  @ViewColumn()", "  ${2:column_name}: ${3:column_type};", "}", "", "$0"]
   }
 }
